@@ -16,7 +16,6 @@ class Bst {
 private:
     Node *root;
 
-    // Recursive insert helper
     void _insert(Node *&sub_root, int x) {
         if (sub_root == nullptr) {
             sub_root = new Node(x);
@@ -29,7 +28,6 @@ private:
         }
     }
 
-    // Reverse in-order traversal for printing
     void _print(Node *root) {
         if (!root) return;
         _print(root->right);
@@ -37,7 +35,7 @@ private:
         _print(root->left);
     }
 
-    // Recursive delete helper (with detailed comments)
+    // Recursive delete helper 
     void _delete(Node*& sub_root, int x) {
         // Base case: reached null node or tree is empty
         if (sub_root == nullptr) return;
